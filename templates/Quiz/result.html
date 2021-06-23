@@ -1,0 +1,23 @@
+{% extends 'Quiz/dependencies.html' %}
+
+{% block content %}
+
+<div class="container ">
+
+    <div>
+        <br>
+        <h2><b><u>RESULT ANALYSIS</u></b></h2>
+        <p>
+            <br>
+            <br><b>Total Score:</b> {{score}} / {{total}}
+            <br><b>Percentage:</b> {{percent}}%
+            <br><b>Time Taken:</b> {{time}} seconds
+            <br><b>Correct :</b> {{correct}}  <b>Incorrect :</b> {{wrong}}
+            <br>
+            <br>
+            <h6>Thank you for taking the quiz!</h6>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

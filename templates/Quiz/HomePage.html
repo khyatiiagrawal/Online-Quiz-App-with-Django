@@ -1,0 +1,37 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load static%}
+{% block content %}
+
+
+<div class="container ">
+    <div align="centre ">
+        
+        <br>
+        <h1><b><u>Welcome to Online Django Quiz!</u></b> </h1>
+        <br>
+        <img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2019/09/Django-Quiz-Questions-1200x675.jpg" alt="DJANGO QUIZ QUESTIONS">
+        <br>
+        <p>
+            <br>
+            New User? <a href='{% url 'register' %}'>Register Here</a>
+            <br>
+            Existing User? <a href='{% url 'login' %}'>Login Here</a>
+            <br>
+
+        </p>
+
+        {% if request.user.is_staff %}
+        <br>
+        <br>
+
+        <h3><b>STAFF ONLY</b></h3>
+        Add new Question :<a href='{% url 'addQuestion' %}'>Here</a>
+        <br>
+        Take Quiz: <a href='{% url 'home' %}'>Here</a>
+        {% endif %} 
+    
+    
+    </div>
+</div>
+
+{% endblock %}
